@@ -1346,7 +1346,9 @@ class ConfigGui:
             if s:
                 nfi = wx.NativeFontInfo()
                 nfi.FromString(s)
-                nfi.SetEncoding(wx.FONTENCODING_ISO8859_1)
+                # MP: Pango Encoding is always UTF8... so likely we'll have problems elsewhere,
+                #     if all the things are done with ISO-8859-1 in mind
+                #nfi.SetEncoding(wx.FONTENCODING_ISO8859_1)
 
                 fi.font = wx.FontFromNativeInfo(nfi)
 
