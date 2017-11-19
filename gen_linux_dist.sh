@@ -11,16 +11,15 @@ DIR="$BASE_DIR/trelby"
 rm -rf linux-dist
 mkdir -p $DIR
 
-FNAME="trelby-$VER.tar"
+FNAME="trelby-$VER.tar.gz"
 rm -f src/*.pyc
 cp -r bin/ src/ trelby.desktop names.txt.gz dict_en.dat.gz sample.trelby manual.html fileformat.txt LICENSE README resources/ $DIR
 cp README.linux $BASE_DIR/README
 
 cd linux-dist
-tar cvf $FNAME "trelby-$VER"
-gzip -9 $FNAME
+tar -cvzf $FNAME --exclude-backups "trelby-$VER"
 
-mv "${FNAME}.gz" ..
+mv "${FNAME}" ..
 
 cd ..
 rm -rf linux-dist
