@@ -1,11 +1,25 @@
 Installation instructions for Trelby on Linux (tar.gz)
 ------------------------------------------------------
 
-You have to copy trelby/ to /opt/trelby/. Afterwards you can run the
-program with the command "/opt/trelby/src/trelby.py".
+You have to copy trelby/ to wherever you can and want,
+then modify trelby/bin/trelby with that path and move
+this file where you want (likely in a bin directory
+which is in PATH).
+
+trelby/bin/trelby by default prepend your $HOME, so
+that you can install without root privileges; but you
+will modify it as you like.
+
+What I'd do: move trelby/ into $HOME/opt/trelby,
+move $HOME/opt/trelby/bin/trelby in $HOME/bin, rmdir
+$HOME/opt/trelby/bin. And if you have $HOME/bin in
+$PATH, you run trelby simply by writing "trelby" in
+the shell.
 
 External dependencies required:
 
  * Python (2.6 or 2.7)
  * wxWidgets (2.8) and its Python bindings (wxPython)
+   * I am adjusting it in order to make it work with
+     3.0, at least for the feature I use.
  * lxml

@@ -1,2 +1,5 @@
 Trelby is a screenplay writing program. See http://www.trelby.org/ for
 more details.
+
+This branch's name tells it all: I am modifying it in order to make
+it work *on my machine* (mainly because of wx > 2.8)
