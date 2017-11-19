@@ -2,3 +2,8 @@
 *.pyo
 .trelby/
 *~
+build/
+dict_en.dat.gz
+manual.html
+names.txt.gz
+trelby-*.tar.gz
