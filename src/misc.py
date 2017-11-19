@@ -47,7 +47,9 @@ def init(doWX = True):
         confPath = ".trelby"
     else:
         if isUnix:
-            progPath = u"/opt/trelby"
+            progPath = unicode(
+                os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                "UTF-8")
             confPath = os.environ["HOME"] + "/.trelby"
         else:
             progPath = getPathFromRegistry()
