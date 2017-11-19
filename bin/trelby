@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+import sys
+import os
+
+homepath = os.environ["HOME"]
+# change as you need
+sys.path.insert(0, homepath + "/opt/trelby/src") 
+
+import trelby
+trelby.main()
